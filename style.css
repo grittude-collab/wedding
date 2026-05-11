@@ -41,7 +41,7 @@ body {
 }
 
 .hero-img {
-  filter: contrast(1.02) brightness(1.05);
+  filter: none;
   transition: transform 0.8s ease;
   display: block;
   width: 100%;
@@ -61,10 +61,10 @@ body {
 }
 
 /* ─────────────────────────────────────────
-   ALL IMAGES — 이미 처리된 흑백 파일 사용
+   ALL IMAGES — 웹툰 컬러 유지
 ───────────────────────────────────────── */
 img {
-  filter: contrast(1.04) brightness(0.98);
+  filter: none;
   transition: filter 0.5s ease;
 }
 
