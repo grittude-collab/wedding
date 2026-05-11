@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- ── Open Graph (KakaoTalk 썸네일) ── -->
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="장정일 ♥ 정소연의 결혼식에 초대합니다">
+  <meta property="og:description" content="2027년 1월 17일 일요일 오전 11시 · 광화문 아펠가모">
+  <meta property="og:image"       content="./assets/og.jpg">
+  <meta property="og:url"         content="https://grittude-collab.github.io/wedding">
+
+  <title>장정일 ♥ 정소연</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400&family=Noto+Serif+KR:wght@200;300;400&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'ww':  '#F8F7F3',
+            'nb':  '#0D0D0D',
+            'tp':  '#767676',
+            'lb':  '#EFEFED',
+            'mb':  '#D4D4D1',
+          },
+          fontFamily: {
+            'display': ['Playfair Display', 'serif'],
+            'en':      ['Cormorant Garamond', 'serif'],
+            'kr':      ['Noto Serif KR', 'serif'],
+            'sans':    ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-ww text-nb font-kr">
+
+<!-- ════════════════════════════════════════
+     01. HERO
+════════════════════════════════════════ -->
+<section id="hero" class="min-h-screen flex flex-col items-center justify-center text-center px-8 relative">
+
+  <div class="relative z-10 w-full px-6" data-aos="fade-up" data-aos-duration="1400">
+
+    <!-- 상단 레이블 -->
+    <p class="label-tag mb-6">Wedding Invitation</p>
+
+    <!-- 마스트헤드 — 마리끌레르 스타일 -->
+    <h1 class="font-display font-black italic text-nb leading-[0.9] mb-6"
+        style="font-size: clamp(3.8rem, 18vw, 5.5rem);">
+      Jang<br>Jeong-il<br>
+      <span class="font-light not-italic text-tp" style="font-size:0.38em; letter-spacing:0.18em;">
+        &amp;
+      </span><br>
+      Jeong<br>So-yeon
+    </h1>
+
+    <!-- 구분선 -->
+    <div class="w-full h-px bg-nb mb-6"></div>
+
+    <!-- 날짜 · 장소 -->
+    <div class="flex justify-between items-end">
+      <div>
+        <p class="font-sans text-[10px] tracking-[0.35em] uppercase text-tp mb-1">Date</p>
+        <p class="font-sans text-xs text-nb tracking-wide">2027. 01. 17 Sun</p>
+        <p class="font-sans text-xs text-nb tracking-wide">오전 11시 00분</p>
+      </div>
+      <div class="text-right">
+        <p class="font-sans text-[10px] tracking-[0.35em] uppercase text-tp mb-1">Venue</p>
+        <p class="font-sans text-xs text-nb tracking-wide">광화문 아펠가모</p>
+        <p class="font-sans text-xs text-tp tracking-wide">지하 2층</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Hero photo — hero.jpg를 assets/images/에 넣으면 자동 표시 -->
+  <div id="hero-photo-wrap" class="relative z-10 mt-12 w-full max-w-[280px] mx-auto"
+       data-aos="fade-up" data-aos-delay="300" data-aos-duration="1400">
+    <div class="aspect-[3/4] overflow-hidden">
+      <img src="./assets/images/hero.jpg"
+           onerror="document.getElementById('hero-photo-wrap').style.display='none'"
+           alt="커플 대표사진"
+           class="w-full h-full object-cover hero-img">
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="scroll-indicator absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+    <p class="font-en text-[10px] tracking-[0.35em] uppercase text-tp">Scroll</p>
+    <div class="w-px h-10 bg-tp opacity-40"></div>
+  </div>
+
+</section>
+
+
+
+<!-- ════════════════════════════════════════
+     05. GALLERY
+     → assets/images/gallery/ 에 01.jpg ~ 12.jpg
+       파일을 넣으면 자동으로 나타남
+════════════════════════════════════════ -->
+<section id="gallery" class="py-24 bg-lb" style="display:none">
+
+  <div class="text-center mb-12 px-8" data-aos="fade-up">
+    <p class="label-tag mb-4">Gallery</p>
+    <h3 class="font-display font-bold text-2xl text-nb">포토 갤러리</h3>
+  </div>
+
+  <div class="gallery-grid px-3" data-aos="fade-up" data-aos-delay="150">
+    <!-- 01 ~ 12.jpg 넣으면 자동 표시 / 없으면 자동 제거 -->
+    <div class="gallery-item"><img src="./assets/images/gallery/01.jpg" onerror="removeGalleryItem(this)" alt=""></div>
+    <div class="gallery-item"><img src="./assets/images/gallery/02.jpg" onerror="removeGalleryItem(this)" alt=""></div>
+    <div class="gallery-item"><img src="./assets/images/gallery/03.jpg" onerror="removeGalleryItem(this)" alt=""></div>
+    <div class="gallery-item"><img src="./assets/images/gallery/04.jpg" onerror="removeGalleryItem(this)" alt=""></div>
+    <div class="gallery-item"><img src="./assets/images/gallery/05.jpg" onerror="removeGalleryItem(this)" alt=""></div>
+    <div class="gallery-item"><img src="./assets/images/gallery/06.jpg" onerror="removeGalleryItem(this)" alt=""></div>
+    <div class="gallery-item"><img src="./assets/images/gallery/07.jpg" onerror="removeGalleryItem(this)" alt=""></div>
+    <div class="gallery-item"><img src="./assets/images/gallery/08.jpg" onerror="removeGalleryItem(this)" alt=""></div>
+    <div class="gallery-item"><img src="./assets/images/gallery/09.jpg" onerror="removeGalleryItem(this)" alt=""></div>
+    <div class="gallery-item"><img src="./assets/images/gallery/10.jpg" onerror="removeGalleryItem(this)" alt=""></div>
+    <div class="gallery-item"><img src="./assets/images/gallery/11.jpg" onerror="removeGalleryItem(this)" alt=""></div>
+    <div class="gallery-item"><img src="./assets/images/gallery/12.jpg" onerror="removeGalleryItem(this)" alt=""></div>
+  </div>
+
+</section>
+
+
+<!-- ════════════════════════════════════════
+     06. VIDEO
+     → assets/videos/highlight.mp4 추가 시 자동 표시
+       포스터: assets/videos/poster.jpg (선택)
+════════════════════════════════════════ -->
+<section id="video-section" class="py-24 px-8 text-center" style="display:none">
+
+  <div data-aos="fade-up">
+    <p class="label-tag mb-4">Film</p>
+    <h3 class="font-kr font-extralight text-2xl text-nb tracking-widest mb-10">우리의 순간</h3>
+  </div>
+
+  <div class="video-wrap" data-aos="fade-up" data-aos-delay="150">
+    <video id="wedding-video"
+           poster="./assets/videos/poster.jpg"
+           controls
+           playsinline
+           preload="none"
+           class="w-full">
+    </video>
+  </div>
+
+  <p class="font-kr font-extralight text-xs text-tp mt-6 tracking-wider" data-aos="fade-up">
+    함께한 순간들을 영상으로 담았습니다
+  </p>
+
+</section>
+
+
+<!-- ════════════════════════════════════════
+     07. CEREMONY DETAILS
+════════════════════════════════════════ -->
+<section id="ceremony" class="py-24 px-8 text-center">
+
+  <div data-aos="fade-up">
+    <p class="label-tag mb-4">Ceremony</p>
+    <h3 class="font-kr font-extralight text-2xl text-nb tracking-widest mb-16">예식 안내</h3>
+  </div>
+
+  <!-- Date box -->
+  <div class="mb-14" data-aos="fade-up">
+    <div class="inline-flex flex-col items-center border border-mb px-10 py-8">
+      <p class="font-en font-light text-4xl text-nb">2027</p>
+      <div class="flex items-center gap-4 my-3">
+        <div class="w-8 h-px bg-mb"></div>
+        <p class="font-en font-light text-2xl text-nb">01 · 17</p>
+        <div class="w-8 h-px bg-mb"></div>
+      </div>
+      <p class="font-kr font-extralight text-sm text-tp tracking-wider">일요일 · 오전 11시 00분</p>
+    </div>
+  </div>
+
+  <!-- Venue -->
+  <div class="mb-14" data-aos="fade-up">
+    <p class="label-tag mb-5">Venue</p>
+    <p class="font-kr font-light text-xl text-nb mb-2">광화문 아펠가모</p>
+    <p class="font-kr font-extralight text-sm text-tp mb-1">지하 2층</p>
+    <p class="font-kr font-extralight text-sm text-tp">서울시 종로구 세종대로 172 광화문 D타워</p>
+  </div>
+
+  <!-- Map -->
+  <div class="map-wrap mb-12" data-aos="fade-up">
+    <iframe
+      src="https://maps.google.com/maps?q=광화문+아펠가모+D타워&t=&z=16&ie=UTF8&iwloc=&output=embed"
+      style="width:100%; height:200px; border:0;"
+      allowfullscreen="" loading="lazy">
+    </iframe>
+  </div>
+
+  <!-- Transport -->
+  <div class="text-left space-y-5" data-aos="fade-up">
+    <div class="flex gap-4 items-start">
+      <span class="font-en text-[10px] tracking-widest text-tp uppercase min-w-[50px] pt-0.5">지하철</span>
+      <p class="font-kr font-extralight text-sm text-nb opacity-75 leading-relaxed">5호선 광화문역 2번 출구 도보 3분<br>1호선 종각역 1번 또는 2번 출구 도보 10분</p>
+    </div>
+    <div class="flex gap-4 items-start">
+      <span class="font-en text-[10px] tracking-widest text-tp uppercase min-w-[50px] pt-0.5">버스</span>
+      <p class="font-kr font-extralight text-sm text-nb opacity-75 leading-relaxed">세종대로 · 광화문 정류장 하차</p>
+    </div>
+    <div class="flex gap-4 items-start">
+      <span class="font-en text-[10px] tracking-widest text-tp uppercase min-w-[50px] pt-0.5">주차</span>
+      <p class="font-kr font-extralight text-sm text-nb opacity-75 leading-relaxed">광화문 D타워 주차장 이용 (혼잡 예상, 대중교통 권장)</p>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ════════════════════════════════════════
+     08. FAMILY
+════════════════════════════════════════ -->
+<section id="family" class="py-24 bg-lb px-8 text-center">
+
+  <div data-aos="fade-up">
+    <p class="label-tag mb-4">Family</p>
+    <h3 class="font-display font-bold text-2xl text-nb mb-14">함께하는 가족</h3>
+  </div>
+
+  <div class="flex justify-center gap-10" data-aos="fade-up">
+
+    <div class="text-center">
+      <p class="label-tag mb-5">Groom</p>
+      <p class="font-sans font-light text-xs text-nb opacity-50 mb-1">장성용 · 김현환의</p>
+      <p class="font-kr font-light text-base text-nb">차남 <span class="font-display font-bold">정일</span></p>
+    </div>
+
+    <div class="w-px bg-nb self-stretch opacity-20"></div>
+
+    <div class="text-center">
+      <p class="label-tag mb-5">Bride</p>
+      <p class="font-sans font-light text-xs text-nb opacity-50 mb-1">정병윤 · 이진경의</p>
+      <p class="font-kr font-light text-base text-nb">장녀 <span class="font-display font-bold">소연</span></p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ════════════════════════════════════════
+     09. ACCOUNT (축의금)
+════════════════════════════════════════ -->
+<section id="account" class="py-24 px-8">
+
+  <div class="text-center mb-12" data-aos="fade-up">
+    <p class="label-tag mb-4">Gift</p>
+    <h3 class="font-display font-bold text-2xl text-nb">마음 전하기</h3>
+  </div>
+
+  <!-- Groom side -->
+  <div class="acc-item" data-aos="fade-up">
+    <button class="acc-btn" onclick="toggleAccordion(this)">
+      <span class="font-kr font-light text-sm text-nb">신랑측 계좌번호</span>
+      <span class="acc-icon text-xl leading-none">+</span>
+    </button>
+    <div class="acc-body">
+      <div class="acc-inner space-y-4">
+        <div class="acc-card">
+          <p class="font-sans font-light text-xs text-tp mb-1">신랑 · 장정일</p>
+          <p class="font-kr font-light text-sm text-nb mb-3">국민은행 123-456-789012</p>
+          <button onclick="copyText('국민은행 123-456-789012', this)" class="copy-btn">복사하기</button>
+        </div>
+        <div class="acc-card">
+          <p class="font-kr font-extralight text-xs text-tp mb-1">신랑 아버지 · 장성용</p>
+          <p class="font-kr font-light text-sm text-nb mb-3">신한은행 110-123-456789</p>
+          <button onclick="copyText('신한은행 110-123-456789', this)" class="copy-btn">복사하기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bride side -->
+  <div class="acc-item" data-aos="fade-up">
+    <button class="acc-btn" onclick="toggleAccordion(this)">
+      <span class="font-kr font-light text-sm text-nb">신부측 계좌번호</span>
+      <span class="acc-icon text-xl leading-none">+</span>
+    </button>
+    <div class="acc-body">
+      <div class="acc-inner space-y-4">
+        <div class="acc-card">
+          <p class="font-sans font-light text-xs text-tp mb-1">신부 · 정소연</p>
+          <p class="font-kr font-light text-sm text-nb mb-3">우리은행 1002-123-456789</p>
+          <button onclick="copyText('우리은행 1002-123-456789', this)" class="copy-btn">복사하기</button>
+        </div>
+        <div class="acc-card">
+          <p class="font-kr font-extralight text-xs text-tp mb-1">신부 아버지 · 정병윤</p>
+          <p class="font-kr font-light text-sm text-nb mb-3">하나은행 12-345678-90123</p>
+          <button onclick="copyText('하나은행 12-345678-90123', this)" class="copy-btn">복사하기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+
+<!-- ════════════════════════════════════════
+     11. FOOTER
+════════════════════════════════════════ -->
+<footer class="py-20 px-8 text-center bg-nb">
+  <div data-aos="fade-up">
+    <p class="font-display font-bold italic text-3xl text-ww opacity-60 mb-5">Thank you</p>
+    <p class="font-kr font-extralight text-xs text-ww opacity-35 leading-[2.4]">
+      참석해 주셔서 진심으로 감사드립니다.<br>
+      두 사람의 새로운 시작을 함께 축복해 주세요.
+    </p>
+    <p class="font-sans font-light text-[9px] text-ww opacity-20 mt-10 tracking-[0.45em]">
+      JEONGIL &amp; SOYEON · 2027
+    </p>
+  </div>
+</footer>
+
+
+<!-- ════════════════════════════════════════
+     LIGHTBOX
+════════════════════════════════════════ -->
+<div id="lightbox" class="fixed inset-0 z-50 items-center justify-center" style="display:none" onclick="closeLightbox()">
+  <div class="absolute inset-0 bg-black opacity-92"></div>
+  <button class="lb-close" onclick="closeLightbox()">✕</button>
+  <button class="lb-prev" onclick="event.stopPropagation(); prevImg()">‹</button>
+  <button class="lb-next" onclick="event.stopPropagation(); nextImg()">›</button>
+  <img id="lb-img" src="" alt="" class="lb-img" onclick="event.stopPropagation()">
+</div>
+
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
