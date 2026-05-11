@@ -50,59 +50,58 @@
 <body class="bg-ww text-nb font-kr">
 
 <!-- ════════════════════════════════════════
-     01. HERO
+     01. HERO — 풀블리드 화보 오버레이
 ════════════════════════════════════════ -->
-<section id="hero" class="min-h-screen flex flex-col items-center justify-center text-center px-8 relative">
+<section id="hero" class="hero-section relative overflow-hidden">
 
-  <div class="relative z-10 w-full px-6" data-aos="fade-up" data-aos-duration="1400">
-
-    <!-- 상단 레이블 -->
-    <p class="label-tag mb-6">Wedding Invitation</p>
-
-    <!-- 마스트헤드 — 마리끌레르 스타일 -->
-    <h1 class="font-display font-black italic text-nb leading-[0.9] mb-6"
-        style="font-size: clamp(3.8rem, 18vw, 5.5rem);">
-      Jang<br>Jeong-il<br>
-      <span class="font-light not-italic text-tp" style="font-size:0.38em; letter-spacing:0.18em;">
-        &amp;
-      </span><br>
-      Jeong<br>So-yeon
-    </h1>
-
-    <!-- 구분선 -->
-    <div class="w-full h-px bg-nb mb-6"></div>
-
-    <!-- 날짜 · 장소 -->
-    <div class="flex justify-between items-end">
-      <div>
-        <p class="font-sans text-[10px] tracking-[0.35em] uppercase text-tp mb-1">Date</p>
-        <p class="font-sans text-xs text-nb tracking-wide">2027. 01. 17 Sun</p>
-        <p class="font-sans text-xs text-nb tracking-wide">오전 11시 00분</p>
-      </div>
-      <div class="text-right">
-        <p class="font-sans text-[10px] tracking-[0.35em] uppercase text-tp mb-1">Venue</p>
-        <p class="font-sans text-xs text-nb tracking-wide">광화문 아펠가모</p>
-        <p class="font-sans text-xs text-tp tracking-wide">지하 2층</p>
-      </div>
-    </div>
-
+  <!-- 풀블리드 사진 -->
+  <div class="absolute inset-0">
+    <img src="./assets/images/hero.jpg"
+         onerror="this.parentElement.style.background='#EFEFED'"
+         alt="커플 사진"
+         class="w-full h-full object-cover object-center hero-img">
   </div>
 
-  <!-- Hero photo — hero.jpg를 assets/images/에 넣으면 자동 표시 -->
-  <div id="hero-photo-wrap" class="relative z-10 mt-12 w-full max-w-[280px] mx-auto"
-       data-aos="fade-up" data-aos-delay="300" data-aos-duration="1400">
-    <div class="aspect-[3/4] overflow-hidden">
-      <img src="./assets/images/hero.jpg"
-           onerror="document.getElementById('hero-photo-wrap').style.display='none'"
-           alt="커플 대표사진"
-           class="w-full h-full object-cover hero-img">
+  <!-- 상단: WEDDING INVITATION 레이블 -->
+  <div class="relative z-10 px-6 pt-10" data-aos="fade-down" data-aos-duration="1200">
+    <p class="label-tag text-nb opacity-70">Wedding Invitation</p>
+  </div>
+
+  <!-- 하단: 이름 + 정보 오버레이 -->
+  <div class="relative z-10 px-6 pb-10 mt-auto" data-aos="fade-up" data-aos-duration="1200">
+
+    <!-- 구분선 -->
+    <div class="w-full h-px bg-nb opacity-30 mb-5"></div>
+
+    <!-- 이름 — 화보 스타일 좌측 정렬 -->
+    <h1 class="font-display font-black italic text-nb leading-[0.88] mb-6"
+        style="font-size: clamp(3.2rem, 16vw, 5rem); mix-blend-mode: multiply;">
+      Jang<br>Jeong&#8209;il<br>
+      <span class="font-light not-italic opacity-50" style="font-size:0.3em; letter-spacing:0.3em;">&#38;</span><br>
+      Jeong<br>So&#8209;yeon
+    </h1>
+
+    <!-- 날짜 · 장소 -->
+    <div class="flex justify-between items-start border-t border-nb border-opacity-20 pt-4">
+      <div>
+        <p class="label-tag mb-1">Date</p>
+        <p class="font-sans text-[11px] text-nb tracking-wide leading-relaxed">
+          2027. 01. 17 Sun<br>오전 11시 00분
+        </p>
+      </div>
+      <div class="text-right">
+        <p class="label-tag mb-1">Venue</p>
+        <p class="font-sans text-[11px] text-nb tracking-wide leading-relaxed">
+          광화문 아펠가모<br>지하 2층
+        </p>
+      </div>
     </div>
+
   </div>
 
   <!-- Scroll indicator -->
-  <div class="scroll-indicator absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-    <p class="font-en text-[10px] tracking-[0.35em] uppercase text-tp">Scroll</p>
-    <div class="w-px h-10 bg-tp opacity-40"></div>
+  <div class="scroll-indicator absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-20">
+    <div class="w-px h-8 bg-nb opacity-30"></div>
   </div>
 
 </section>
