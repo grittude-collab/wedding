@@ -54,10 +54,10 @@ body {
 }
 
 /* ─────────────────────────────────────────
-   ALL IMAGES — editorial grayscale
+   ALL IMAGES — 이미 처리된 흑백 파일 사용
 ───────────────────────────────────────── */
 img {
-  filter: grayscale(85%) contrast(1.08) brightness(0.96);
+  filter: contrast(1.04) brightness(0.98);
   transition: filter 0.5s ease;
 }
 
