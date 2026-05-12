@@ -16,7 +16,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400&family=Noto+Serif+KR:wght@200;300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Noto+Serif+KR:wght@200;300;400&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -33,9 +33,7 @@
           },
           fontFamily: {
             'display': ['Playfair Display', 'serif'],
-            'en':      ['Cormorant Garamond', 'serif'],
             'kr':      ['Noto Serif KR', 'serif'],
-            'sans':    ['Inter', 'sans-serif'],
           }
         }
       }
@@ -50,57 +48,49 @@
 <body class="bg-ww text-nb font-kr">
 
 <!-- ════════════════════════════════════════
-     01. HERO — 풀블리드 화보 오버레이
+     01. HERO — 에디토리얼 레이아웃 (텍스트 / 사진 분리)
 ════════════════════════════════════════ -->
-<section id="hero" class="hero-section relative overflow-hidden">
+<section id="hero" class="hero-section">
 
-  <!-- 풀블리드 사진 -->
-  <div class="absolute inset-0">
+  <!-- ① 텍스트 블록 — 크림 배경, 사진과 분리 -->
+  <div class="px-6 pt-10 pb-8" data-aos="fade-down" data-aos-duration="1200">
+    <p class="label-tag mb-5">Wedding Invitation</p>
+    <span class="full-rule mb-7 block"></span>
+    <h1 class="font-display font-black italic text-nb leading-[0.88]"
+        style="font-size: clamp(3.2rem, 16vw, 5rem);">
+      Jang<br>Jeong&#8209;il<br>
+      <span class="font-display font-light not-italic opacity-40" style="font-size:0.3em; letter-spacing:0.35em;">&#38;</span><br>
+      Jeong<br>So&#8209;yeon
+    </h1>
+  </div>
+
+  <!-- ② 풀블리드 사진 — 텍스트 없음 -->
+  <div class="w-full">
     <img src="./assets/images/hero.jpg"
          onerror="this.parentElement.style.background='#EFEFED'"
          alt="커플 사진"
-         class="w-full h-full object-cover object-center hero-img">
+         class="w-full block hero-img">
   </div>
 
-  <!-- 상단: WEDDING INVITATION 레이블 -->
-  <div class="relative z-10 px-6 pt-10" data-aos="fade-down" data-aos-duration="1200">
-    <p class="label-tag text-nb opacity-70">Wedding Invitation</p>
-  </div>
-
-  <!-- 하단: 이름 + 정보 오버레이 -->
-  <div class="relative z-10 px-6 pb-10 mt-auto" data-aos="fade-up" data-aos-duration="1200">
-
-    <!-- 구분선 -->
-    <div class="w-full h-px bg-nb opacity-30 mb-5"></div>
-
-    <!-- 이름 — 화보 스타일 좌측 정렬 -->
-    <h1 class="font-display font-black italic text-nb leading-[0.88] mb-6"
-        style="font-size: clamp(3.2rem, 16vw, 5rem); mix-blend-mode: multiply;">
-      Jang<br>Jeong&#8209;il<br>
-      <span class="font-light not-italic opacity-50" style="font-size:0.3em; letter-spacing:0.3em;">&#38;</span><br>
-      Jeong<br>So&#8209;yeon
-    </h1>
-
-    <!-- 날짜 · 장소 -->
-    <div class="flex justify-between items-start border-t border-nb border-opacity-20 pt-4">
-      <div>
-        <p class="label-tag mb-1">Date</p>
-        <p class="font-sans text-[11px] text-nb tracking-wide leading-relaxed">
-          2027. 01. 17 Sun<br>오전 11시 00분
-        </p>
-      </div>
-      <div class="text-right">
-        <p class="label-tag mb-1">Venue</p>
-        <p class="font-sans text-[11px] text-nb tracking-wide leading-relaxed">
-          광화문 아펠가모<br>지하 2층
-        </p>
-      </div>
+  <!-- ③ 날짜 · 장소 바 -->
+  <div class="px-6 pt-5 pb-6 flex justify-between items-start border-t border-nb border-opacity-10"
+       data-aos="fade-up" data-aos-duration="1200">
+    <div>
+      <p class="label-tag mb-1">Date</p>
+      <p class="font-kr font-light text-[11px] text-nb tracking-wide leading-relaxed">
+        2027. 01. 17 Sun<br>오전 11시 00분
+      </p>
     </div>
-
+    <div class="text-right">
+      <p class="label-tag mb-1">Venue</p>
+      <p class="font-kr font-light text-[11px] text-nb tracking-wide leading-relaxed">
+        광화문 아펠가모<br>지하 2층
+      </p>
+    </div>
   </div>
 
-  <!-- Scroll indicator -->
-  <div class="scroll-indicator absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-20">
+  <!-- ④ 스크롤 인디케이터 -->
+  <div class="scroll-indicator flex flex-col items-center gap-2 pb-6">
     <div class="w-px h-8 bg-nb opacity-30"></div>
   </div>
 
@@ -181,10 +171,10 @@
   <!-- Date box -->
   <div class="mb-14" data-aos="fade-up">
     <div class="inline-flex flex-col items-center border border-mb px-10 py-8">
-      <p class="font-en font-light text-4xl text-nb">2027</p>
+      <p class="font-display font-light text-4xl text-nb">2027</p>
       <div class="flex items-center gap-4 my-3">
         <div class="w-8 h-px bg-mb"></div>
-        <p class="font-en font-light text-2xl text-nb">01 · 17</p>
+        <p class="font-display font-light text-2xl text-nb">01 · 17</p>
         <div class="w-8 h-px bg-mb"></div>
       </div>
       <p class="font-kr font-extralight text-sm text-tp tracking-wider">일요일 · 오전 11시 00분</p>
@@ -211,15 +201,15 @@
   <!-- Transport -->
   <div class="text-left space-y-5" data-aos="fade-up">
     <div class="flex gap-4 items-start">
-      <span class="font-en text-[10px] tracking-widest text-tp uppercase min-w-[50px] pt-0.5">지하철</span>
+      <span class="font-kr text-[10px] tracking-widest text-tp uppercase min-w-[50px] pt-0.5">지하철</span>
       <p class="font-kr font-extralight text-sm text-nb opacity-75 leading-relaxed">5호선 광화문역 2번 출구 도보 3분<br>1호선 종각역 1번 또는 2번 출구 도보 10분</p>
     </div>
     <div class="flex gap-4 items-start">
-      <span class="font-en text-[10px] tracking-widest text-tp uppercase min-w-[50px] pt-0.5">버스</span>
+      <span class="font-kr text-[10px] tracking-widest text-tp uppercase min-w-[50px] pt-0.5">버스</span>
       <p class="font-kr font-extralight text-sm text-nb opacity-75 leading-relaxed">세종대로 · 광화문 정류장 하차</p>
     </div>
     <div class="flex gap-4 items-start">
-      <span class="font-en text-[10px] tracking-widest text-tp uppercase min-w-[50px] pt-0.5">주차</span>
+      <span class="font-kr text-[10px] tracking-widest text-tp uppercase min-w-[50px] pt-0.5">주차</span>
       <p class="font-kr font-extralight text-sm text-nb opacity-75 leading-relaxed">광화문 D타워 주차장 이용 (혼잡 예상, 대중교통 권장)</p>
     </div>
   </div>
@@ -241,7 +231,7 @@
 
     <div class="text-center">
       <p class="label-tag mb-5">Groom</p>
-      <p class="font-sans font-light text-xs text-nb opacity-50 mb-1">장성용 · 김현환의</p>
+      <p class="font-kr font-light text-xs text-nb opacity-50 mb-1">장성용 · 김현환의</p>
       <p class="font-kr font-light text-base text-nb">차남 <span class="font-display font-bold">정일</span></p>
     </div>
 
@@ -249,7 +239,7 @@
 
     <div class="text-center">
       <p class="label-tag mb-5">Bride</p>
-      <p class="font-sans font-light text-xs text-nb opacity-50 mb-1">정병윤 · 이진경의</p>
+      <p class="font-kr font-light text-xs text-nb opacity-50 mb-1">정병윤 · 이진경의</p>
       <p class="font-kr font-light text-base text-nb">장녀 <span class="font-display font-bold">소연</span></p>
     </div>
 
@@ -277,7 +267,7 @@
     <div class="acc-body">
       <div class="acc-inner space-y-4">
         <div class="acc-card">
-          <p class="font-sans font-light text-xs text-tp mb-1">신랑 · 장정일</p>
+          <p class="font-kr font-light text-xs text-tp mb-1">신랑 · 장정일</p>
           <p class="font-kr font-light text-sm text-nb mb-3">국민은행 123-456-789012</p>
           <button onclick="copyText('국민은행 123-456-789012', this)" class="copy-btn">복사하기</button>
         </div>
@@ -299,7 +289,7 @@
     <div class="acc-body">
       <div class="acc-inner space-y-4">
         <div class="acc-card">
-          <p class="font-sans font-light text-xs text-tp mb-1">신부 · 정소연</p>
+          <p class="font-kr font-light text-xs text-tp mb-1">신부 · 정소연</p>
           <p class="font-kr font-light text-sm text-nb mb-3">우리은행 1002-123-456789</p>
           <button onclick="copyText('우리은행 1002-123-456789', this)" class="copy-btn">복사하기</button>
         </div>
@@ -326,7 +316,7 @@
       참석해 주셔서 진심으로 감사드립니다.<br>
       두 사람의 새로운 시작을 함께 축복해 주세요.
     </p>
-    <p class="font-sans font-light text-[9px] text-ww opacity-20 mt-10 tracking-[0.45em]">
+    <p class="font-display font-light text-[9px] text-ww opacity-20 mt-10 tracking-[0.45em]">
       JEONGIL &amp; SOYEON · 2027
     </p>
   </div>

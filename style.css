@@ -18,8 +18,8 @@ body {
 ───────────────────────────────────────── */
 .label-tag {
   display: block;
-  font-family: 'Inter', sans-serif;
-  font-weight: 300;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
   font-size: 9px;
   letter-spacing: 0.45em;
   text-transform: uppercase;
@@ -34,10 +34,7 @@ body {
    HERO — 풀블리드 화보
 ───────────────────────────────────────── */
 .hero-section {
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  background-color: #F8F7F3;
 }
 
 .hero-img {
@@ -56,8 +53,8 @@ body {
 .scroll-indicator.fade-out { opacity: 0; pointer-events: none; }
 
 @keyframes scrollBounce {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50%       { transform: translateX(-50%) translateY(7px); }
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(7px); }
 }
 
 /* ─────────────────────────────────────────
@@ -153,8 +150,8 @@ img {
   transition: transform 0.3s ease;
   line-height: 1;
   flex-shrink: 0;
-  font-family: 'Inter', sans-serif;
-  font-weight: 300;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
   color: #0D0D0D;
 }
 .acc-icon.open { transform: rotate(45deg); }
@@ -178,8 +175,8 @@ img {
    COPY BUTTON
 ───────────────────────────────────────── */
 .copy-btn {
-  font-family: 'Inter', sans-serif;
-  font-weight: 300;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
   font-size: 10px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -200,8 +197,8 @@ img {
    CONTACT BUTTONS
 ───────────────────────────────────────── */
 .c-btn {
-  font-family: 'Inter', sans-serif;
-  font-weight: 300;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
   font-size: 11px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -253,8 +250,8 @@ img {
   color: rgba(255,255,255,0.65);
   font-size: 20px;
   cursor: pointer;
-  font-family: 'Inter', sans-serif;
-  font-weight: 300;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
   transition: color 0.2s;
 }
 .lb-close:hover { color: #fff; }
